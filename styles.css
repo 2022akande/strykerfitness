@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes the full height */
+}
+
+
+/* NAVBAR */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.top-nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-nav ul li {
+    margin-left: 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.top-nav ul li a:hover {
+    color: lightblue;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .top-nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* HERO SECTION */
+.hero-section {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Get Started Button */
+.hero-section a {
+    text-decoration: none;
+    background-color: lightblue;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section a:hover {
+    background-color: #333;
+    color: lightblue;
+    transform: translateY(-3px);
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+}
+
+.about-us {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* Signup Form Styling */
+.signup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light background for the section */
+    min-height: 100vh; /* Ensures the form centers vertically */
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white; /* Form background */
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup-form label {
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded input fields */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+    outline: none;
+    border-color: lightblue;
+    box-shadow: 0 0 5px lightblue;
+}
+
+.signup-form button {
+    background-color: lightblue;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-form button:hover {
+    background-color: #333;
+    color: white;
+}
+
+

@@ -1,0 +1,183 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes the full height */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.top-nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-nav ul li {
+    margin-left: 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.top-nav ul li a:hover {
+    color: lightblue;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .top-nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.game-container {
+    position: relative; /* Set the container as the positioning context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.game-container img {
+    position: absolute; /* Allows us to layer images */
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.game-container img[alt="boxing ring"] {
+    width: 80%; /* Adjust size */
+    z-index: 1; /* Background layer */
+}
+
+.game-container img[alt="blue boxer"] {
+    width: 20%; /* Smaller size for the boxer */
+    bottom: 30%; /* Adjust the position */
+    z-index: 2; /* Layer above the ring */
+}
+
+.game-container img[alt="red boxer"] {
+    width: 20%; /* Smaller size for the boxer */
+    bottom: 5%; /* Move higher to overlap the blue boxer */
+    z-index: 3; /* Layer above the blue boxer */
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; /* Ensure it is above other elements */
+}
+
+/* Start button styles */
+.start-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hide overlay when it is not needed */
+.overlay.hidden {
+    display: none;
+}
+
+
+/* Ensures the attack UI appears above the game elements */
+.attack-ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Styling for the h3 and buttons in the attack UI */
+.attack-ui h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.attack-ui button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attack-ui button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure game container has relative positioning */
+.game-container {
+    position: relative; /* Required for positioning child elements absolutely */
+    width: 100%;
+    height: 100%;
+}
